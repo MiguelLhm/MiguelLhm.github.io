@@ -1,0 +1,50 @@
+
+
+.wrapper {
+  padding-top: 100px;
+  width: 25vmax;
+  height: 25vmax;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.main-element {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  display: block;
+  height: 98%;
+  width: 98%;
+  margin: auto;
+  align-self: center;
+  background: #474B4F;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.border {
+  position: absolute;
+  display: block;
+  top: -50%;
+  left: -50%;
+  z-index: -10;
+  display: block;
+  height: 320%;
+  width: 220%;
+  transform: rotate(-45deg);
+  overflow: hidden;
+  background: linear-gradient(to right, #6B6E70 20%, #6B6E70 40%, #61892F 50%, #61892F 55%, #6B6E70 70%, #6B6E70 100%);
+  background-size: 200% auto;
+  border-radius: 10px;
+  animation: shine 3s linear infinite;
+}
+
+/*Begin shimmer code*/
+
+@keyframes shine {
+    to {
+      background-position: 500% center;
+    }
+  }

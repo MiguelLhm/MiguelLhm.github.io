@@ -1,0 +1,90 @@
+html, body {
+    margin:0px;
+    height:100%;
+}
+
+.container{
+    
+    display: grid;
+    height: 100vh;
+/* Define amount and size of Columns and Rows */
+    
+    grid-template-rows: 100% 100% 100%;
+/* Set elements on grid */
+    grid-template-areas: 
+    "main main main main"
+    "content1 content1 content1 content1"
+    "content2 content2 content2 content2";
+    
+  
+    
+}
+
+
+
+
+#content1{
+    background: radial-gradient(#222629, #1b1f22);
+    grid-area: content1;
+}
+
+#content2{
+    background: radial-gradient(#222629, #1b1f22);
+    grid-area: content2;
+}
+
+
+
+footer{
+    background: rgb(252, 175, 175);
+    grid-area: footer;
+}
+
+
+/* Change structure of layout when smaller screen size detected */
+@media only screen and (max-width:550px){
+    
+    .container{
+        /* Change to only 1 column since mobile screen so small */
+        grid-template-columns: 1fr;
+    
+  
+        grid-template-areas: 
+        "main"
+        "content1"
+        "content2";
+    }
+
+}
+
+ 
+@media only screen and (max-width:600px){
+  .container, .navigation{
+      display: none;
+  }
+    #content-mobile {display: block;}
+    /* Centers nav bar for damn small phones */
+    #responsive{
+        
+      display: flex;
+      position: fixed;
+      left: 48%;
+    }
+    /* Reset all */
+}
+
+@media only screen and (min-width:600px){
+    
+    #content-mobile {display: none;}
+}
+
+@media only screen and (max-width:1024px){
+    
+    /* Centers nav bar for damn small phones */
+    response{
+        
+        font-size: 5vw;
+    }
+}
+
+a:hover { text-shadow: 0 0 3px #86C232; }

@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+
+/* Bring navbar on top of canvas */
+#overlay{
+    position: absolute;
+    z-index: 2;
+}
+
+html.smooth {
+    scroll-behavior: smooth;
+  }
+
+  
+
+.navigation{
+    position: relative;
+    
+    /* Controls horizontal placement of divbar */
+    top: 10%;
+  
+
+  
+    
+}
+
+
+
+.navigation ul{
+ 
+    display: flex;
+    position: fixed;
+    left: 75%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+}
+.navigation ul li a .icon{
+    position: relative;
+    line-height: 75px;
+    transition: 0.5s;
+    font-size:30px;
+}
+.navigation ul li.active a .icon{
+    font-size: 20px;
+    transform: translateY(-12px);
+}
+.navigation ul li a .text{
+    position: absolute;
+    font-size: 12px;
+    color: #fff;
+    bottom:20px;
+    font-weight: 400;
+    transition: 0.25s;
+    text-transform: uppercase;
+    transform: scale(0);
+
+}
+.navigation ul li.active a .text{
+    transform: scale(1);
+}
+
+.indicator{
+    position: absolute;
+    left: 40px;
+    width: 70px;
+    height: 70px;
+  
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.navigation ul li:nth-child(1).active ~ .indicator{
+    background: #61892F;
+    box-shadow: 0 8px 25px #86C232;
+    transform:translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator{
+    background: #61892F;
+    box-shadow: 0 8px 25px #86C232;
+    transform:translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator{
+    background: #61892F;
+    box-shadow: 0 8px 25px #86c23262;
+    transform:translateX(calc(70px * 2));
+}
